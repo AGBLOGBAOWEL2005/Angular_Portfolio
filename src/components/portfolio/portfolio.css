@@ -1,0 +1,17 @@
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Optionnel : Ajoute un effet de flou aux bords pour le style Venus */
+#portfolio::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, transparent, #051129);
+  pointer-events: none;
+}

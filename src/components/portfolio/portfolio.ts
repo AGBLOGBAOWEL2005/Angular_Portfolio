@@ -7,44 +7,56 @@ import { Component } from '@angular/core';
 })
 export class Portfolio {
 
-  // Données avec chemins vers public/images/*.png
-  // L'alternance des classes 'md:mt-24' crée l'effet escalier de Venus
-  portfolioinfo = [
-    {
-      id: 1,
-      image: 'images/cozycasa.png',
-      alt: 'Projet 1',
-      title: 'Brand Strategy',
-      info: 'Digital Marketing',
-      class: ''
-    },
-    {
-      id: 2,
-      image: 'images/humans.png',
-      alt: 'Projet 2',
-      title: 'Visual Identity',
-      info: 'Web Design',
-      class: 'md:mt-24'
-    },
-    {
-      id: 3,
-      image: 'images/mars.png',
-      alt: 'Projet 3',
-      title: 'App Development',
-      info: 'Mobile App',
-      class: 'md:-mt-12'
-    },
-    {
-      id: 4,
-      image: 'images/panda-logo.png',
-      alt: 'Projet 4',
-      title: 'Creative Analysis',
-      info: 'Consulting',
-      class: 'md:mt-12'
-    }
-
-   
-  ];
+ portfolioinfo = [
+  {
+    id: 1,
+    image: 'images/P1.jpeg',
+    alt: 'Plateforme E-commerce de luxe',
+    title: 'Aura Jewel',
+    info: 'Angular / Tailwind / Stripe',
+    class: ''
+  },
+  {
+    id: 2,
+    image: 'images/P2.jpeg',
+    alt: 'Dashboard de gestion de cryptomonnaies',
+    title: 'CryptoStat',
+    info: 'Tableau de bord / API Temps Réel',
+    class: 'mt-24'
+  },
+  {
+    id: 3,
+    image: 'images/P3.jpeg',
+    alt: 'Application mobile de fitness',
+    title: 'ZenFlow',
+    info: 'UI Design / Mobile App',
+    class: ''
+  },
+  {
+    id: 4,
+    image: 'images/P4.jpeg',
+    alt: 'Site de réservation de voyages éco-responsables',
+    title: 'TerraTravel',
+    info: 'Node.js / MongoDB',
+    class: 'mt-24'
+  },
+  {
+    id: 5,
+    image: 'images/P5.jpeg',
+    alt: 'Réseau social pour photographes',
+    title: 'PhosShare',
+    info: 'Firebase / Image Processing',
+    class: ''
+  },
+  {
+    id: 6,
+    image: 'images/P6.jpeg',
+    alt: 'Application de gestion de tâches IA',
+    title: 'MindTask AI',
+    info: 'Intelligence Artificielle / UX',
+    class: 'mt-24'
+  }
+];
 
   deleteProject(id: number) {
     if(confirm('Voulez-vous vraiment supprimer ce projet ?')) {
@@ -53,7 +65,6 @@ export class Portfolio {
   }
 
   editProject(item: any) {
-    console.log('Edition de:', item.title);
     alert('Modification de : ' + item.title);
   }
 }

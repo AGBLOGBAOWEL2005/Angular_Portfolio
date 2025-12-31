@@ -4,10 +4,10 @@ import { Header } from '../components/header/header';
 import { Hero } from '../components/hero/hero';
 import { Portfolio } from '../components/portfolio/portfolio';
 import { Footer } from '../components/footer/footer';
-import { Connecter } from '../components/connecter/connecter';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Connecter,Hero,Portfolio,Footer],
+  imports: [RouterOutlet,Header,Hero,Portfolio,Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
