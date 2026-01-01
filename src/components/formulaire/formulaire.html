@@ -1,62 +1,64 @@
-<section class="py-12 bg-white dark:bg-[#0b132a]">
-  <div class="container mx-auto max-w-4xl px-6">
-    <div class="mb-10">
-      <div class="flex items-center gap-3 mb-2">
-        <span class="w-8 h-[2px] bg-[#007bff]"></span>
-        <span class="text-[#007bff] font-bold uppercase tracking-widest text-xs">Gestion</span>
+<section class="py-2 bg-white dark:bg-[#0b132a] h-screen flex items-center">
+  <div class="container mx-auto max-w-5xl px-4">
+    
+    <div class="mb-3">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="w-6 h-[1px] bg-[#007bff]"></span>
+        <span class="text-[#007bff] font-bold uppercase tracking-widest text-[10px]">Gestion</span>
       </div>
-      <h2 class="text-3xl md:text-5xl font-extrabold text-[#1A202C] dark:text-white tracking-tighter">
+      <h2 class="text-2xl font-extrabold text-[#1A202C] dark:text-white tracking-tighter">
         Ajouter un projet<span class="text-[#007bff]">.</span>
       </h2>
     </div>
 
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-[#1c263f] p-8 md:p-12 rounded-[2rem] shadow-sm">
+    <form class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-gray-50 dark:bg-[#1c263f] p-4 rounded-2xl shadow-sm">
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">ID du Projet</label>
-        <input type="number" placeholder="ex: 5" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">ID</label>
+        <input type="number" placeholder="ex: 5" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Titre du projet</label>
-        <input type="text" placeholder="Nom du projet" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Titre</label>
+        <input type="text" placeholder="Nom du projet" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">URL de l'image (PNG)</label>
-        <input type="text" placeholder="images/mon-projet.png" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Catégorie</label>
+        <input type="text" placeholder="ex: Web Design" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Domaine / Catégorie</label>
-        <input type="text" placeholder="ex: Web Design" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Année</label>
+        <input type="text" placeholder="2024" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Année</label>
-        <input type="text" placeholder="2024" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="md:col-span-2 flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">URL Image</label>
+        <input type="text" placeholder="images/projet.png" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Objectif</label>
-        <input type="text" placeholder="Le but du projet" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white">
+      <div class="md:col-span-3 flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Objectif</label>
+        <input type="text" placeholder="Le but du projet" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
-      <div class="flex flex-col gap-2 md:col-span-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Contraintes rencontrées</label>
-        <textarea rows="3" placeholder="Quels étaient les obstacles ?" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
+      <div class="md:col-span-3 grid grid-cols-2 gap-3">
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Contraintes</label>
+          <textarea rows="2" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Solution</label>
+          <textarea rows="2" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
+        </div>
       </div>
 
-      <div class="flex flex-col gap-2 md:col-span-2">
-        <label class="text-sm font-bold text-[#68758D] dark:text-white/70 ml-2">Solution apportée</label>
-        <textarea rows="3" placeholder="Comment avez-vous résolu le problème ?" class="w-full px-6 py-4 bg-white dark:bg-[#0b132a] border-none rounded-xl focus:ring-2 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
-      </div>
-
-      <div class="md:col-span-2 flex gap-4 pt-4">
-        <button type="submit" class="flex-1 bg-[#007bff] text-white font-bold py-4 rounded-xl hover:bg-[#0056b3] transition-all shadow-lg shadow-blue-500/20">
-          Ajouter au Portfolio
+      <div class="md:col-span-3 flex gap-3 mt-2">
+        <button type="submit" class="flex-1 bg-[#007bff] text-white text-sm font-bold py-3 rounded-lg hover:bg-[#0056b3] transition-all">
+          Ajouter
         </button>
-        <button type="button" class="px-8 py-4 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white font-bold rounded-xl hover:bg-gray-300 transition-all">
+        <button type="button" (click)="annuler()" class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white text-sm font-bold rounded-lg">
           Annuler
         </button>
       </div>

@@ -2,8 +2,8 @@
   "projets": [
     {
       "id": "1",
-      "title": "Plateforme E-Commerce Venus",
-      "image": "assets/images/project-venus.jpg",
+      "title": "Plateforme E-Commerce",
+      "image": "images/P1.jpeg",
       "domaine": "Développement Web",
       "annee": 2024,
       "objectif": "Créer une boutique en ligne moderne et performante pour une marque de cosmétiques.",
@@ -14,57 +14,62 @@
     {
       "id": "2",
       "title": "Application Fitness Tracker",
-      "image": "assets/images/fitness-app.jpg",
+      "image": "images/P2.jpeg",
       "domaine": "Application Mobile",
       "annee": 2023,
       "objectif": "Aider les utilisateurs à suivre leur consommation de calories et leurs exercices quotidiens.",
       "contrainte": "Synchronisation en temps réel avec les montres connectées.",
       "solution": "Développement avec Ionic et Firebase pour la base de données en temps réel.",
-      "description": "L'application Fitness Tracker est une solution complète de suivi de santé qui intègre des algorithmes d'analyse d'activité physique. Au-delà du simple comptage de pas, elle propose des programmes d'entraînement personnalisés basés sur l'intelligence artificielle qui s'adaptent à la progression de l'utilisateur. Nous avons porté une attention particulière à la consommation d'énergie pour garantir que l'utilisation du GPS en arrière-plan n'impacte pas drastiquement l'autonomie du smartphone."
+      "description": "L'application Fitness Tracker est une solution complète de suivi de santé qui intègre des algorithmes d'analyse d'activité physique. Au-delà du simple comptage de pas, elle propose des programmes d'entraînement personnalisés basés sur l'intelligence artificielle qui s'adaptent à la progression de l'utilisateur. Nous avons porté une attention particulière à la consommation d'énergie pour garantir que l'utilisation du GPS en arrière-plan n'impacte pas drastiquement l'autonomie du smartphone.",
+       "classe" : "mt-24"
     },
     {
       "id": "3",
       "title": "Refonte Identité Visuelle LTI3",
-      "image": "assets/images/branding-lti.jpg",
+      "image": "images/P3.jpeg",
       "domaine": "Design Graphique",
       "annee": 2024,
       "objectif": "Moderniser l'image de marque de l'école pour attirer de nouveaux étudiants.",
       "contrainte": "Conserver les couleurs historiques tout en simplifiant le logo.",
       "solution": "Création d'un système de design (Design System) complet et d'une charte graphique épurée.",
-      "description": "La refonte de l'identité visuelle de LTI3 visait à projeter une image d'innovation et d'excellence académique. Le travail a débuté par une analyse profonde des valeurs de l'institution pour aboutir à une charte graphique cohérente déclinable sur tous les supports : web, réseaux sociaux, signalétique intérieure et supports de cours. Le nouveau langage visuel utilise des typographies modernes et une iconographie épurée qui facilitent la lisibilité tout en renforçant l'appartenance à la communauté de l'école."
+      "description": "La refonte de l'identité visuelle de LTI3 visait à projeter une image d'innovation et d'excellence académique. Le travail a débuté par une analyse profonde des valeurs de l'institution pour aboutir à une charte graphique cohérente déclinable sur tous les supports : web, réseaux sociaux, signalétique intérieure et supports de cours. Le nouveau langage visuel utilise des typographies modernes et une iconographie épurée qui facilitent la lisibilité tout en renforçant l'appartenance à la communauté de l'école.",
+      "classe" : ""
     },
     {
       "id": "4",
       "title": "Système de Gestion de Bibliothèque",
-      "image": "assets/images/library-system.jpg",
+      "image": "images/P4.jpeg",
       "domaine": "Logiciel de Bureau",
       "annee": 2022,
       "objectif": "Automatiser l'emprunt et le retour des livres pour une bibliothèque municipale.",
       "contrainte": "Interface simplifiée pour les bénévoles non technophiles.",
       "solution": "Application développée en JavaFX avec une base de données locale robuste.",
-      "description": "Ce système de gestion complet permet de suivre en temps réel la disponibilité des ouvrages et d'automatiser les rappels pour les retards par email. Nous avons intégré un lecteur de code-barres pour accélérer les transactions de prêt. Le logiciel génère également des statistiques mensuelles sur les genres les plus populaires, aidant ainsi la bibliothèque à orienter ses futurs achats de livres pour mieux répondre aux attentes des lecteurs locaux."
+      "description": "Ce système de gestion complet permet de suivre en temps réel la disponibilité des ouvrages et d'automatiser les rappels pour les retards par email. Nous avons intégré un lecteur de code-barres pour accélérer les transactions de prêt. Le logiciel génère également des statistiques mensuelles sur les genres les plus populaires, aidant ainsi la bibliothèque à orienter ses futurs achats de livres pour mieux répondre aux attentes des lecteurs locaux.",
+      "classe" : "mt-24"
     },
     {
       "id": "5",
       "title": "Tableau de Bord IoT pour Serres",
-      "image": "assets/images/iot-greenhouse.jpg",
+      "image": "images/P5.jpeg",
       "domaine": "Internet des Objets",
       "annee": 2023,
       "objectif": "Surveiller l'humidité, la température et la luminosité d'une serre automatisée.",
       "contrainte": "Transmission de données dans des zones avec une faible couverture Wi-Fi.",
       "solution": "Utilisation de capteurs LoRaWAN reliés à un dashboard Angular haute performance.",
-      "description": "Ce tableau de bord permet aux agriculteurs de visualiser l'état de leurs cultures à distance. Grâce à un système de notifications push, ils sont immédiatement alertés en cas de chute de température critique ou de manque d'eau. Le projet inclut une section de prédiction basée sur l'historique climatique, permettant d'anticiper les besoins en irrigation et de réduire la consommation d'eau de près de 30% tout en optimisant le rendement des récoltes."
+      "description": "Ce tableau de bord permet aux agriculteurs de visualiser l'état de leurs cultures à distance. Grâce à un système de notifications push, ils sont immédiatement alertés en cas de chute de température critique ou de manque d'eau. Le projet inclut une section de prédiction basée sur l'historique climatique, permettant d'anticiper les besoins en irrigation et de réduire la consommation d'eau de près de 30% tout en optimisant le rendement des récoltes.",
+      "classe" : ""
     },
     {
       "id": "6",
       "title": "Plateforme d'Apprentissage en Ligne",
-      "image": "assets/images/elearning-platform.jpg",
+      "image": "images/P6.jpeg",
       "domaine": "Éducation Numérique",
       "annee": 2025,
       "objectif": "Démocratiser l'accès aux cours de programmation de haut niveau.",
       "contrainte": "Accessibilité pour les malvoyants et conformité aux normes WCAG.",
       "solution": "Interface construite avec Tailwind CSS et intégration de lecteurs d'écran avancés.",
-      "description": "La plateforme propose des parcours d'apprentissage interactifs avec des éditeurs de code directement intégrés au navigateur. Nous avons conçu un système de gamification avec des badges et des classements pour maintenir la motivation des apprenants. Une attention particulière a été portée à l'inclusivité, avec des thèmes à haut contraste et une navigation entièrement pilotable au clavier, permettant à chaque étudiant, quel que soit son handicap, de suivre les cours dans des conditions optimales."
+      "description": "La plateforme propose des parcours d'apprentissage interactifs avec des éditeurs de code directement intégrés au navigateur. Nous avons conçu un système de gamification avec des badges et des classements pour maintenir la motivation des apprenants. Une attention particulière a été portée à l'inclusivité, avec des thèmes à haut contraste et une navigation entièrement pilotable au clavier, permettant à chaque étudiant, quel que soit son handicap, de suivre les cours dans des conditions optimales.",
+      "classe" : "mt-24"
     }
   ]
 }

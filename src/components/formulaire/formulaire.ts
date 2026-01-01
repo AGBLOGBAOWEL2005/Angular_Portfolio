@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './formulaire.css',
 })
 export class Formulaire {
-
+     onAnnuler = output<any>();
+     annuler(){
+      this.onAnnuler.emit(0);
+     }
 }
