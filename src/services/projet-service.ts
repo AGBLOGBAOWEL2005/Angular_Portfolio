@@ -12,5 +12,7 @@ export class ProjetService {
     getall(){
           return this.http.get<Array<ProjetInterf>>(this.url);
     }
-
+    add(projet:ProjetInterf){
+      return this.http.post(this.url,projet);
+    }
 }

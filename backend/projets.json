@@ -21,7 +21,7 @@
       "contrainte": "Synchronisation en temps réel avec les montres connectées.",
       "solution": "Développement avec Ionic et Firebase pour la base de données en temps réel.",
       "description": "L'application Fitness Tracker est une solution complète de suivi de santé qui intègre des algorithmes d'analyse d'activité physique. Au-delà du simple comptage de pas, elle propose des programmes d'entraînement personnalisés basés sur l'intelligence artificielle qui s'adaptent à la progression de l'utilisateur. Nous avons porté une attention particulière à la consommation d'énergie pour garantir que l'utilisation du GPS en arrière-plan n'impacte pas drastiquement l'autonomie du smartphone.",
-       "classe" : "mt-24"
+      "classe": "mt-24"
     },
     {
       "id": "3",
@@ -33,7 +33,7 @@
       "contrainte": "Conserver les couleurs historiques tout en simplifiant le logo.",
       "solution": "Création d'un système de design (Design System) complet et d'une charte graphique épurée.",
       "description": "La refonte de l'identité visuelle de LTI3 visait à projeter une image d'innovation et d'excellence académique. Le travail a débuté par une analyse profonde des valeurs de l'institution pour aboutir à une charte graphique cohérente déclinable sur tous les supports : web, réseaux sociaux, signalétique intérieure et supports de cours. Le nouveau langage visuel utilise des typographies modernes et une iconographie épurée qui facilitent la lisibilité tout en renforçant l'appartenance à la communauté de l'école.",
-      "classe" : ""
+      "classe": ""
     },
     {
       "id": "4",
@@ -45,7 +45,7 @@
       "contrainte": "Interface simplifiée pour les bénévoles non technophiles.",
       "solution": "Application développée en JavaFX avec une base de données locale robuste.",
       "description": "Ce système de gestion complet permet de suivre en temps réel la disponibilité des ouvrages et d'automatiser les rappels pour les retards par email. Nous avons intégré un lecteur de code-barres pour accélérer les transactions de prêt. Le logiciel génère également des statistiques mensuelles sur les genres les plus populaires, aidant ainsi la bibliothèque à orienter ses futurs achats de livres pour mieux répondre aux attentes des lecteurs locaux.",
-      "classe" : "mt-24"
+      "classe": "mt-24"
     },
     {
       "id": "5",
@@ -57,7 +57,7 @@
       "contrainte": "Transmission de données dans des zones avec une faible couverture Wi-Fi.",
       "solution": "Utilisation de capteurs LoRaWAN reliés à un dashboard Angular haute performance.",
       "description": "Ce tableau de bord permet aux agriculteurs de visualiser l'état de leurs cultures à distance. Grâce à un système de notifications push, ils sont immédiatement alertés en cas de chute de température critique ou de manque d'eau. Le projet inclut une section de prédiction basée sur l'historique climatique, permettant d'anticiper les besoins en irrigation et de réduire la consommation d'eau de près de 30% tout en optimisant le rendement des récoltes.",
-      "classe" : ""
+      "classe": ""
     },
     {
       "id": "6",
@@ -69,7 +69,7 @@
       "contrainte": "Accessibilité pour les malvoyants et conformité aux normes WCAG.",
       "solution": "Interface construite avec Tailwind CSS et intégration de lecteurs d'écran avancés.",
       "description": "La plateforme propose des parcours d'apprentissage interactifs avec des éditeurs de code directement intégrés au navigateur. Nous avons conçu un système de gamification avec des badges et des classements pour maintenir la motivation des apprenants. Une attention particulière a été portée à l'inclusivité, avec des thèmes à haut contraste et une navigation entièrement pilotable au clavier, permettant à chaque étudiant, quel que soit son handicap, de suivre les cours dans des conditions optimales.",
-      "classe" : "mt-24"
+      "classe": "mt-24"
     }
   ]
 }

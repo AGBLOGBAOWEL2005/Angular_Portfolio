@@ -1,28 +1,73 @@
-import { Component,ViewChild,ElementRef} from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core'; // Ajout de OnInit
 import { Formulaire } from '../formulaire/formulaire';
+import { ProjetInterf } from '../../interface/projet-interf';
+import { ProjetService } from '../../services/projet-service';
 
 @Component({
   selector: 'app-ajout-projet',
-  imports: [Formulaire,],
+  standalone: true,
+  imports: [Formulaire],
   templateUrl: './ajout-projet.html',
   styleUrl: './ajout-projet.css',
 })
-export class AjoutProjet {
+export class AjoutProjet implements OnInit {
+
+  private projetService = inject(ProjetService);
+
   texteDuBouton: string = "+";
-  valeur: number=0;
-  affichage: string = " invisible opacity-0 fixed pt-[20%] pl-4";
-  afficherTexte() {
-        this.texteDuBouton = "Ajouter un projet";
+  isFormVisible: boolean = false;
+
+  mesProjets: ProjetInterf[] = [];
+  prochainId: number = 1;
+
+  ngOnInit() {
+    this.projetService.getall().subscribe({
+      next: (data) => {
+        this.mesProjets = data;
+
+        if (this.mesProjets.length > 0) {
+          const maxId = Math.max(...this.mesProjets.map(p => p.id));
+          this.prochainId = maxId + 1;
+        }
+      },
+      error: (err) => console.error("Erreur de récupération :", err)
+    });
   }
-  afficherPlus(){
+
+  afficherTexte() {
+    this.texteDuBouton = "Ajouter un projet";
+  }
+
+  afficherPlus() {
     this.texteDuBouton = "+";
   }
-  afficherFormulaire(){
-    this.affichage = "z-50  inset-0 bg-black/50 visible opacity-100 fixed py-6 px-[15vh]";
+
+  afficherFormulaire() {
+    this.isFormVisible = true;
   }
-  NotafficherFormulaire(valeur:number){
-         if(valeur == 1){
-          this.affichage =" invisible opacity-0 fixed pt-[20%] pl-4"; 
-         }
+
+  NotafficherFormulaire(valeur: number) {
+    if (valeur == 1) {
+      this.isFormVisible = false;
+    }
+  }
+
+  addProjet(projet: ProjetInterf) {
+    projet.id = this.prochainId;
+    console.log(projet.id)
+    this.NotafficherFormulaire(1);
+
+    this.projetService.add(projet).subscribe({
+      next: (res) => {
+        console.log("Projet ajouté avec succès :", res);
+
+       // this.mesProjets.push(res);
+
+        this.prochainId = this.prochainId + 1;
+
+        alert("Projet ajouté !");
+      },
+      error: (err) => console.error("Erreur lors de l'ajout :", err),
+    });
   }
 }

@@ -1,10 +1,7 @@
-<button #monboutonTexteAjout 
-    (mouseout)="afficherPlus()" 
-    (mouseover)="afficherTexte()"
-    (click)="afficherFormulaire()"
+<button #monboutonTexteAjout (mouseout)="afficherPlus()" (mouseover)="afficherTexte()" (click)="afficherFormulaire()"
     class="flex items-center justify-center h-20 min-w-[80px] my-6 px-6 rounded-full bg-blue-700 text-white font-extrabold transition-all duration-500 ease-in-out cursor-pointer hover:bg-blue-800 shadow-lg">
     {{ texteDuBouton }}
 </button>
-<div [class]="affichage">
-    <app-formulaire (onAnnuler)="NotafficherFormulaire(1)"></app-formulaire>
-</div>
+@if (isFormVisible){<div class="z-50 inset-0 bg-black/50 visible opacity-100 fixed py-6 px-[15vh]">
+    <app-formulaire (onAnnuler)="NotafficherFormulaire(1)" (onAdd)="addProjet($event)"></app-formulaire>
+</div>}

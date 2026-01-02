@@ -1,6 +1,6 @@
 <section class="py-2 bg-white dark:bg-[#0b132a] h-screen flex items-center">
   <div class="container mx-auto max-w-5xl px-4">
-    
+
     <div class="mb-3">
       <div class="flex items-center gap-2 mb-1">
         <span class="w-6 h-[1px] bg-[#007bff]"></span>
@@ -11,54 +11,66 @@
       </h2>
     </div>
 
-    <form class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-gray-50 dark:bg-[#1c263f] p-4 rounded-2xl shadow-sm">
-
-      <div class="flex flex-col gap-1">
-        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">ID</label>
-        <input type="number" placeholder="ex: 5" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
-      </div>
+    <form #myForm="ngForm" (ngSubmit)="handleSubmit(myForm)"
+      class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-gray-50 dark:bg-[#1c263f] p-4 rounded-2xl shadow-sm">
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Titre</label>
-        <input type="text" placeholder="Nom du projet" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <input name="title" ngModel type="text" placeholder="Nom du projet"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Catégorie</label>
-        <input type="text" placeholder="ex: Web Design" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <input ngModel name="daomaine" type="text" placeholder="ex: Web Design"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Année</label>
-        <input type="text" placeholder="2024" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <input ngModel name="annee" type="text" placeholder="2024"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="md:col-span-2 flex flex-col gap-1">
-        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">URL Image</label>
-        <input type="text" placeholder="images/projet.png" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Nom du fichier image</label>
+        <input ngModel name="image" type="text" required placeholder="ex: projet1.png"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <p class="text-[9px] text-gray-400 mt-1 italic">Note: Indiquez le nom exact (ex: photo.jpg) présent dans
+          public/images/</p>
       </div>
-
-      <div class="md:col-span-3 flex flex-col gap-1">
+      <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Objectif</label>
-        <input type="text" placeholder="Le but du projet" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+        <input ngModel name="objectif" type="text" required placeholder="Le but du projet"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
+      </div>
+      <div class="md:col-span-3 flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Description</label>
+        <textarea name="description" ngModelrequired type="text" placeholder="Parle brievement du projet"
+          class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white"></textarea>
       </div>
 
       <div class="md:col-span-3 grid grid-cols-2 gap-3">
         <div class="flex flex-col gap-1">
           <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Contraintes</label>
-          <textarea rows="2" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
+          <textarea name="contrainte" required ngModel rows="2"
+            class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
         </div>
         <div class="flex flex-col gap-1">
           <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Solution</label>
-          <textarea rows="2" class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
+          <textarea name="solution" required ngModel rows="2"
+            class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
         </div>
       </div>
 
       <div class="md:col-span-3 flex gap-3 mt-2">
-        <button type="submit" class="flex-1 bg-[#007bff] text-white text-sm font-bold py-3 rounded-lg hover:bg-[#0056b3] transition-all">
+        <button type="submit" [disabled]="myForm.invalid" [class.opacity-50]="myForm.invalid"
+          [class.cursor-not-allowed]="myForm.invalid"
+          class="flex-1 bg-[#007bff] text-white text-sm font-bold py-3 rounded-lg hover:bg-[#0056b3] transition-all">
           Ajouter
         </button>
-        <button type="button" (click)="annuler()" class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white text-sm font-bold rounded-lg">
+        <button type="button" (click)="annuler()"
+          class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white text-sm font-bold rounded-lg">
           Annuler
         </button>
       </div>
