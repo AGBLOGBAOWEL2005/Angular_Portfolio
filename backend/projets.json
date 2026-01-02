@@ -1,18 +1,6 @@
 {
   "projets": [
     {
-      "id": "2",
-      "title": "Application Fitness Tracker",
-      "image": "images/P2.jpeg",
-      "domaine": "Application Mobile",
-      "annee": 2023,
-      "objectif": "Aider les utilisateurs à suivre leur consommation de calories et leurs exercices quotidiens.",
-      "contrainte": "Synchronisation en temps réel avec les montres connectées.",
-      "solution": "Développement avec Ionic et Firebase pour la base de données en temps réel.",
-      "description": "L'application Fitness Tracker est une solution complète de suivi de santé qui intègre des algorithmes d'analyse d'activité physique. Au-delà du simple comptage de pas, elle propose des programmes d'entraînement personnalisés basés sur l'intelligence artificielle qui s'adaptent à la progression de l'utilisateur. Nous avons porté une attention particulière à la consommation d'énergie pour garantir que l'utilisation du GPS en arrière-plan n'impacte pas drastiquement l'autonomie du smartphone.",
-      "classe": "mt-24"
-    },
-    {
       "id": "3",
       "title": "Refonte Identité Visuelle LTI3",
       "image": "images/P3.jpeg",
