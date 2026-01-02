@@ -7,7 +7,7 @@
         <span class="text-[#007bff] font-bold uppercase tracking-widest text-[10px]">Gestion</span>
       </div>
       <h2 class="text-2xl font-extrabold text-[#1A202C] dark:text-white tracking-tighter">
-        Ajouter un projet<span class="text-[#007bff]">.</span>
+        {{ editData() ? 'Modifier le projet' : 'Ajouter un projet' }}<span class="text-[#007bff]">.</span>
       </h2>
     </div>
 
@@ -16,49 +16,50 @@
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Titre</label>
-        <input name="title" ngModel type="text" placeholder="Nom du projet"
+        <input name="title" [ngModel]="editData()?.title" type="text" placeholder="Nom du projet"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Catégorie</label>
-        <input ngModel name="daomaine" type="text" placeholder="ex: Web Design"
+        <input [ngModel]="editData()?.domaine" name="domaine" type="text" placeholder="ex: Web Design"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Année</label>
-        <input ngModel name="annee" type="text" placeholder="2024"
+        <input [ngModel]="editData()?.annee" name="annee" type="text" placeholder="2024"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
 
       <div class="md:col-span-2 flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Nom du fichier image</label>
-        <input ngModel name="image" type="text" required placeholder="ex: projet1.png"
+        <input [ngModel]="editData()?.image?.replace('images/', '')" name="image" type="text" required placeholder="ex: projet1.png"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
-        <p class="text-[9px] text-gray-400 mt-1 italic">Note: Indiquez le nom exact (ex: photo.jpg) présent dans
-          public/images/</p>
+        <p class="text-[9px] text-gray-400 mt-1 italic">Note: Indiquez le nom exact (ex: photo.jpg) présent dans public/images/</p>
       </div>
+
       <div class="flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Objectif</label>
-        <input ngModel name="objectif" type="text" required placeholder="Le but du projet"
+        <input [ngModel]="editData()?.objectif" name="objectif" type="text" required placeholder="Le but du projet"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white">
       </div>
+
       <div class="md:col-span-3 flex flex-col gap-1">
         <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Description</label>
-        <textarea name="description" ngModelrequired type="text" placeholder="Parle brievement du projet"
+        <textarea name="description" [ngModel]="editData()?.description" required type="text" placeholder="Parle brievement du projet"
           class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white"></textarea>
       </div>
 
       <div class="md:col-span-3 grid grid-cols-2 gap-3">
         <div class="flex flex-col gap-1">
           <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Contraintes</label>
-          <textarea name="contrainte" required ngModel rows="2"
+          <textarea name="contrainte" required [ngModel]="editData()?.contrainte" rows="2"
             class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
         </div>
         <div class="flex flex-col gap-1">
           <label class="text-[11px] font-bold text-[#68758D] dark:text-white/70 ml-1">Solution</label>
-          <textarea name="solution" required ngModel rows="2"
+          <textarea name="solution" required [ngModel]="editData()?.solution" rows="2"
             class="w-full px-3 py-2 text-sm bg-white dark:bg-[#0b132a] border-none rounded-lg focus:ring-1 focus:ring-[#007bff] outline-none dark:text-white resize-none"></textarea>
         </div>
       </div>
@@ -67,7 +68,7 @@
         <button type="submit" [disabled]="myForm.invalid" [class.opacity-50]="myForm.invalid"
           [class.cursor-not-allowed]="myForm.invalid"
           class="flex-1 bg-[#007bff] text-white text-sm font-bold py-3 rounded-lg hover:bg-[#0056b3] transition-all">
-          Ajouter
+          {{ editData() ? 'Enregistrer les modifications' : 'Ajouter' }}
         </button>
         <button type="button" (click)="annuler()"
           class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-white text-sm font-bold rounded-lg">

@@ -6,13 +6,22 @@ import { ProjetInterf } from '../interface/projet-interf';
   providedIn: 'root',
 })
 export class ProjetService {
-    url : string = "http://localhost:3000/projets";
-    private http = inject(HttpClient);
+  url: string = "http://localhost:3000/projets";
+  private http = inject(HttpClient);
 
-    getall(){
-          return this.http.get<Array<ProjetInterf>>(this.url);
-    }
-    add(projet:ProjetInterf){
-      return this.http.post(this.url,projet);
-    }
+  getall() {
+    return this.http.get<Array<ProjetInterf>>(this.url);
+  }
+
+  add(projet: ProjetInterf) {
+    return this.http.post(this.url, projet);
+  }
+
+  update(id: number, projet: ProjetInterf) {
+    return this.http.put(`${this.url}/${id}`, projet);
+  }
+
+  delete(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

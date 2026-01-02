@@ -7,13 +7,24 @@ import { Footer } from '../components/footer/footer';
 import { Connecter } from '../components/connecter/connecter';
 import { Formulaire } from '../components/formulaire/formulaire';
 import { AjoutProjet } from '../components/ajout-projet/ajout-projet';
+import { ProjetInterf } from '../interface/projet-interf';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,AjoutProjet,Formulaire,Connecter,Hero,Portfolio,Footer],
+  standalone: true,
+  imports: [RouterOutlet, Header, AjoutProjet, Formulaire, Connecter, Hero, Portfolio, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('Angular_Portfolio');
+  projetSelectionne: ProjetInterf | null = null;
+
+  preparerModif(projet: ProjetInterf) {
+    this.projetSelectionne = projet;
+  }
+
+  resetModif() {
+    this.projetSelectionne = null;
+  }
 }

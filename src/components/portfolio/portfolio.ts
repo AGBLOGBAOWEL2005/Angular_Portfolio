@@ -1,29 +1,36 @@
-import { Component, inject,OnInit } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { ProjetService } from '../../services/projet-service';
 import { ProjetInterf } from '../../interface/projet-interf';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
-  imports:[CommonModule],
+  imports: [CommonModule],
   standalone: true,
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
-export class Portfolio{
- private projetService = inject(ProjetService);
-  portfolioinfo: Array<ProjetInterf> = []; 
+export class Portfolio {
+  private projetService = inject(ProjetService);
+
+  onEdit = output<ProjetInterf>();
 
   portfolioinfo$ = this.projetService.getall();
 
   deleteProject(id: number) {
-    if(confirm('Voulez-vous vraiment supprimer ce projet ?')) {
-      this.portfolioinfo = this.portfolioinfo.filter(p => p.id !== id);
+    if (confirm('Voulez-vous vraiment supprimer ce projet ?')) {
+      this.projetService.delete(id).subscribe({
+        next: () => {
+          this.portfolioinfo$ = this.projetService.getall();
+        },
+        error: (err) => console.error("Erreur suppression :", err)
+      });
     }
   }
 
-  editProject(item: any) {
-    alert('Modification de : ' + item.title);
+
+  editProject(item: ProjetInterf) {
+
+    this.onEdit.emit(item);
   }
 }

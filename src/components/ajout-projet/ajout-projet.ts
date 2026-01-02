@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core'; // Ajout de OnInit
+import { Component, inject, OnInit, input, output, effect } from '@angular/core';
 import { Formulaire } from '../formulaire/formulaire';
 import { ProjetInterf } from '../../interface/projet-interf';
 import { ProjetService } from '../../services/projet-service';
@@ -11,63 +11,52 @@ import { ProjetService } from '../../services/projet-service';
   styleUrl: './ajout-projet.css',
 })
 export class AjoutProjet implements OnInit {
-
   private projetService = inject(ProjetService);
+  projetAEditer = input<ProjetInterf | null>(null);
+  onFermeModale = output<void>();
 
   texteDuBouton: string = "+";
   isFormVisible: boolean = false;
-
   mesProjets: ProjetInterf[] = [];
-  prochainId: number = 1;
+
+  constructor() {
+    effect(() => {
+      if (this.projetAEditer()) {
+        this.isFormVisible = true;
+      }
+    });
+  }
 
   ngOnInit() {
     this.projetService.getall().subscribe({
-      next: (data) => {
-        this.mesProjets = data;
-
-        if (this.mesProjets.length > 0) {
-          const maxId = Math.max(...this.mesProjets.map(p => p.id));
-          this.prochainId = maxId + 1;
-        }
-      },
-      error: (err) => console.error("Erreur de récupération :", err)
+      next: (data) => this.mesProjets = data
     });
   }
 
-  afficherTexte() {
-    this.texteDuBouton = "Ajouter un projet";
-  }
+  afficherTexte() { this.texteDuBouton = "Ajouter un projet"; }
+  afficherPlus() { this.texteDuBouton = "+"; }
+  afficherFormulaire() { this.isFormVisible = true; }
 
-  afficherPlus() {
-    this.texteDuBouton = "+";
-  }
-
-  afficherFormulaire() {
-    this.isFormVisible = true;
-  }
-
+  
   NotafficherFormulaire(valeur: number) {
-    if (valeur == 1) {
+    if (valeur === 1) {
       this.isFormVisible = false;
+      this.onFermeModale.emit();
     }
   }
 
-  addProjet(projet: ProjetInterf) {
-    projet.id = this.prochainId;
-    console.log(projet.id)
-    this.NotafficherFormulaire(1);
-
-    this.projetService.add(projet).subscribe({
-      next: (res) => {
-        console.log("Projet ajouté avec succès :", res);
-
-       // this.mesProjets.push(res);
-
-        this.prochainId = this.prochainId + 1;
-
-        alert("Projet ajouté !");
-      },
-      error: (err) => console.error("Erreur lors de l'ajout :", err),
-    });
+  handleSave(projet: ProjetInterf) {
+    const editMode = this.projetAEditer();
+    if (editMode) {
+      this.projetService.update(editMode.id, projet).subscribe({
+        next: () => { alert("Projet mis à jour !"); location.reload(); }
+      });
+    } else {
+      const maxId = this.mesProjets.length > 0 ? Math.max(...this.mesProjets.map(p => p.id)) : 0;
+      projet.id = maxId + 1;
+      this.projetService.add(projet).subscribe({
+        next: () => { alert("Projet ajouté !"); location.reload(); }
+      });
+    }
   }
 }
