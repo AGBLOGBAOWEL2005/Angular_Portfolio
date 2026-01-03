@@ -27,7 +27,7 @@ export class Connecter {
     // 2. Appel du service
     this.adminService.login(login, password).subscribe({
       next: (admins) => {
-        if (admins.length > 0) {
+        if (admins.length == 1) {
           // Connexion réussie
           this.adminService.isAdmin.set(true); 
           localStorage.setItem('isLoggedIn', 'true');

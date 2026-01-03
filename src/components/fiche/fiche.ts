@@ -11,25 +11,30 @@ import { CommonModule } from '@angular/common';
   templateUrl: './fiche.html',
   styleUrl: './fiche.css',
 })
-export class Fiche implements OnInit {
+export class Fiche  {
   private route = inject(ActivatedRoute);
   private projetService = inject(ProjetService);
 
-  projet: ProjetInterf | undefined;
+  // Récupération de l'ID depuis l'URL
+     idParam = this.route.snapshot.paramMap.get('id');
 
-  ngOnInit() {
-    // Récupération de l'ID depuis l'URL
-    const idParam = this.route.snapshot.paramMap.get('id');
+    projetDeatail$ = this.projetService.getOne(Number(this.idParam));
+  // projet: ProjetInterf | undefined;
+  // ngOnInit() {
+  //   // Récupération de l'ID depuis l'URL
+  //   const idParam = this.route.snapshot.paramMap.get('id');
 
-    this.projetService.getall().subscribe({
-      next: (res: any) => {
-        // On gère les deux formats de JSON possibles (tableau direct ou objet .projets)
-        const liste = Array.isArray(res) ? res : res.projets;
+  //   this.projetService.getall().subscribe({
+  //     next: (res: any) => {
+  //       // On gère les deux formats de JSON possibles (tableau direct ou objet .projets)
+  //       const liste = Array.isArray(res) ? res : res.projets;
 
-        // Utilisation de == pour comparer "1" et 1 sans erreur
-        this.projet = liste.find((p: any) => p.id == idParam);
-      },
-      error: (err) => console.error("Erreur de chargement", err)
-    });
-  }
+  //       // Utilisation de == pour comparer "1" et 1 sans erreur
+  //       this.projet = liste.find((p: any) => p.id == idParam);
+  //       console.log(this.projet);
+  //     },
+  //     error: (err) => console.error("Erreur de chargement", err)
+  //   });
+  //   console.log(this.projet);
+  // }
 }

@@ -16,7 +16,9 @@ export class ProjetService {
   add(projet: ProjetInterf) {
     return this.http.post(this.url, projet);
   }
-
+  getOne(id:number){
+    return this.http.get<ProjetInterf>(this.url + '/' + id);
+   }
   update(id: number, projet: ProjetInterf) {
     return this.http.put(`${this.url}/${id}`, projet);
   }

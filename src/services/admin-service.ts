@@ -6,7 +6,7 @@ import { AdminInterf } from '../interface/admin-interf';
   providedIn: 'root',
 })
 export class AdminService {
-  private url: string = "http://localhost:3000/projets";
+  private url: string = "http://localhost:3000/admin";
   private http = inject(HttpClient);
   
   isAdmin = signal<boolean>(localStorage.getItem('isLoggedIn') === 'true');

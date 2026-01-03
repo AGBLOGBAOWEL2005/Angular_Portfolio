@@ -8,7 +8,7 @@
       Retour au Portfolio
     </a>
 
-    @if (projet) {
+    @if (projetDeatail$ | async; as projet){
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
       <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
@@ -37,6 +37,10 @@
           </div>
         </div>
       </div>
+    </div>
+    }@else {
+    <div class="flex justify-center items-center min-h-[50vh]">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
     </div>
     }
   </div>
