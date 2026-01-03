@@ -31,6 +31,17 @@
             <p class="text-gray-300">{{ projet.objectif }}</p>
           </div>
 
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Contrainte</h4>
+              <p class="text-gray-400 text-sm">{{ projet.contrainte }}</p>
+            </div>
+            <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Solution</h4>
+              <p class="text-gray-400 text-sm">{{ projet.solution }}</p>
+            </div>
+          </div>
+
           <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
             <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Description</h4>
             <p class="text-gray-400 leading-relaxed">{{ projet.description }}</p>

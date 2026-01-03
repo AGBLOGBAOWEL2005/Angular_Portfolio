@@ -1,41 +1,6 @@
 {
   "projets": [
     {
-      "title": "Plateforme E-Commerce",
-      "domaine": "Développement Web/Mobile",
-      "annee": 2024,
-      "image": "images/P1.jpeg",
-      "objectif": "Créer une boutique en ligne moderne et performante pour une marque de cosmétiques.",
-      "description": "Ce projet consistait à concevoir une expérience d'achat immersive et fluide. Nous avons mis en place une architecture robuste permettant de gérer des milliers de références produits tout en maintenant un temps de réponse minimal. L'interface utilisateur a été optimisée pour la conversion mobile, incluant un tunnel d'achat simplifié en trois étapes et une gestion dynamique des stocks synchronisée en temps réel avec l'entrepôt du client.",
-      "contrainte": "Chargement rapide des images haute résolution et paiement sécurisé.",
-      "solution": "Utilisation d'Angular avec le rendu côté serveur (SSR) et intégration de l'API Stripe.",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "title": "Application Fitness Tracker",
-      "image": "images/P2.jpeg",
-      "domaine": "Application Mobile",
-      "annee": 2023,
-      "objectif": "Aider les utilisateurs à suivre leur consommation de calories et leurs exercices quotidiens.",
-      "contrainte": "Synchronisation en temps réel avec les montres connectées.",
-      "solution": "Développement avec Ionic et Firebase pour la base de données en temps réel.",
-      "description": "L'application Fitness Tracker est une solution complète de suivi de santé qui intègre des algorithmes d'analyse d'activité physique. Au-delà du simple comptage de pas, elle propose des programmes d'entraînement personnalisés basés sur l'intelligence artificielle qui s'adaptent à la progression de l'utilisateur. Nous avons porté une attention particulière à la consommation d'énergie pour garantir que l'utilisation du GPS en arrière-plan n'impacte pas drastiquement l'autonomie du smartphone.",
-      "classe": "mt-24"
-    },
-    {
-      "id": "3",
-      "title": "Refonte Identité Visuelle LTI3",
-      "image": "images/P3.jpeg",
-      "domaine": "Design Graphique",
-      "annee": 2024,
-      "objectif": "Moderniser l'image de marque de l'école pour attirer de nouveaux étudiants.",
-      "contrainte": "Conserver les couleurs historiques tout en simplifiant le logo.",
-      "solution": "Création d'un système de design (Design System) complet et d'une charte graphique épurée.",
-      "description": "La refonte de l'identité visuelle de LTI3 visait à projeter une image d'innovation et d'excellence académique. Le travail a débuté par une analyse profonde des valeurs de l'institution pour aboutir à une charte graphique cohérente déclinable sur tous les supports : web, réseaux sociaux, signalétique intérieure et supports de cours. Le nouveau langage visuel utilise des typographies modernes et une iconographie épurée qui facilitent la lisibilité tout en renforçant l'appartenance à la communauté de l'école.",
-      "classe": ""
-    },
-    {
       "id": "4",
       "title": "Système de Gestion de Bibliothèque",
       "image": "images/P4.jpeg",
