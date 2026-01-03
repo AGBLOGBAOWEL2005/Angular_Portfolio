@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connecter',
-  standalone: true, 
   imports: [FormsModule],
   templateUrl: './connecter.html',
   styleUrl: './connecter.css',
@@ -29,9 +28,9 @@ export class Connecter {
       next: (admins) => {
         if (admins.length == 1) {
           // Connexion réussie
-          this.adminService.isAdmin.set(true); 
+          this.adminService.isAdmin.set(true);
           localStorage.setItem('isLoggedIn', 'true');
-          this.router.navigate(['/']); 
+          this.router.navigate(['/']);
         } else {
           // Échec
           alert("Identifiants incorrects. Veuillez réessayer.");

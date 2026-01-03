@@ -4,7 +4,6 @@ import { ProjetInterf } from '../../interface/projet-interf';
 
 @Component({
   selector: 'app-formulaire',
-  standalone: true,
   imports: [FormsModule],
   templateUrl: './formulaire.html',
   styleUrl: './formulaire.css',

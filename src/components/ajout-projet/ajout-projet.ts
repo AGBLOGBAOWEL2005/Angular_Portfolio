@@ -6,7 +6,6 @@ import { AdminService } from '../../services/admin-service';
 
 @Component({
   selector: 'app-ajout-projet',
-  standalone: true,
   imports: [Formulaire],
   templateUrl: './ajout-projet.html',
   styleUrl: './ajout-projet.css',

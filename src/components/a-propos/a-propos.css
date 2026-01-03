@@ -1,0 +1,23 @@
+/* Animation pour le badge "Qui suis-je" */
+.animate-ping {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Effet de glassmorphism sur les cartes de technos */
+.bg-glass {
+  background: rgba(11, 19, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Le cercle bleu en arrière-plan (le glow) */
+.bg-glow {
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, rgba(5, 17, 41, 0) 70%);
+}
