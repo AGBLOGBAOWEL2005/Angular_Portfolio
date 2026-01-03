@@ -1,0 +1,14 @@
+{
+    "admin":[
+    {
+        "id": 1,
+        "login": "anta",
+        "password": "anta"
+    },
+    {
+        "id": 2,
+        "login": "owel",
+        "password": "owel"
+    }
+]
+}

@@ -2,6 +2,7 @@ import { Component, inject, output } from '@angular/core';
 import { ProjetService } from '../../services/projet-service';
 import { ProjetInterf } from '../../interface/projet-interf';
 import { CommonModule } from '@angular/common';
+import { AdminService } from '../../services/admin-service';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Portfolio {
   private projetService = inject(ProjetService);
+  adminService = inject(AdminService);
 
   onEdit = output<ProjetInterf>();
 

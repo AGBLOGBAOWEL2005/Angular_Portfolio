@@ -2,6 +2,7 @@ import { Component, inject, OnInit, input, output, effect } from '@angular/core'
 import { Formulaire } from '../formulaire/formulaire';
 import { ProjetInterf } from '../../interface/projet-interf';
 import { ProjetService } from '../../services/projet-service';
+import { AdminService } from '../../services/admin-service';
 
 @Component({
   selector: 'app-ajout-projet',
@@ -12,6 +13,7 @@ import { ProjetService } from '../../services/projet-service';
 })
 export class AjoutProjet implements OnInit {
   private projetService = inject(ProjetService);
+  adminService = inject(AdminService);
   projetAEditer = input<ProjetInterf | null>(null);
   onFermeModale = output<void>();
 

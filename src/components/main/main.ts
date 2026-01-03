@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from '../header/header';
 import { Hero } from '../hero/hero';
 import { Portfolio } from '../portfolio/portfolio';
+import { Footer } from '../footer/footer';
 import { Connecter } from '../connecter/connecter';
 import { Formulaire } from '../formulaire/formulaire';
 import { AjoutProjet } from '../ajout-projet/ajout-projet';
@@ -9,7 +11,7 @@ import { ProjetInterf } from '../../interface/projet-interf';
 
 @Component({
   selector: 'app-main',
-  imports: [RouterOutlet,Hero,Portfolio,Connecter,Formulaire,AjoutProjet],
+  imports: [RouterOutlet,Header,Hero,Portfolio,Footer,Connecter,Formulaire,AjoutProjet],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })
