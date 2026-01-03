@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AdminService } from '../../services/admin-service';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
+  adminService = inject(AdminService);
 }

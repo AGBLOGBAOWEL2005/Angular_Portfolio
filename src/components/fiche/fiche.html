@@ -1,0 +1,43 @@
+<section class="min-h-screen bg-[#051129] text-white py-20 px-6">
+  <div class="container mx-auto max-w-6xl">
+
+    <a routerLink="/" class="text-[#007bff] hover:text-white transition-colors mb-12 inline-flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Retour au Portfolio
+    </a>
+
+    @if (projet) {
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+      <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+        <img [src]="projet.image" [alt]="projet.title" class="w-full h-full object-cover aspect-[4/5]">
+      </div>
+
+      <div class="flex flex-col justify-center">
+        <div class="mb-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-12 h-[2px] bg-[#007bff]"></span>
+            <span class="text-[#007bff] font-bold uppercase tracking-widest text-sm">{{ projet.domaine }}</span>
+          </div>
+          <h1 class="text-5xl font-extrabold mb-4">{{ projet.title }}</h1>
+          <p class="text-xl text-gray-400">Année : {{ projet.annee }}</p>
+        </div>
+
+        <div class="space-y-6 mb-10">
+          <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+            <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Objectif</h4>
+            <p class="text-gray-300">{{ projet.objectif }}</p>
+          </div>
+
+          <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+            <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Description</h4>
+            <p class="text-gray-400 leading-relaxed">{{ projet.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

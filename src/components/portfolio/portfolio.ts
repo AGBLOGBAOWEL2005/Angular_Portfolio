@@ -2,16 +2,19 @@ import { Component, inject, output } from '@angular/core';
 import { ProjetService } from '../../services/projet-service';
 import { ProjetInterf } from '../../interface/projet-interf';
 import { CommonModule } from '@angular/common';
+import { AdminService } from '../../services/admin-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   standalone: true,
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
 export class Portfolio {
   private projetService = inject(ProjetService);
+  adminService = inject(AdminService);
 
   onEdit = output<ProjetInterf>();
 

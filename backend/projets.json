@@ -2,7 +2,7 @@
   "projets": [
     {
       "title": "Plateforme E-Commerce",
-      "domaine": "Développement Web",
+      "domaine": "Développement Web/Mobile",
       "annee": 2024,
       "image": "images/P1.jpeg",
       "objectif": "Créer une boutique en ligne moderne et performante pour une marque de cosmétiques.",
@@ -70,28 +70,18 @@
       "solution": "Interface construite avec Tailwind CSS et intégration de lecteurs d'écran avancés.",
       "description": "La plateforme propose des parcours d'apprentissage interactifs avec des éditeurs de code directement intégrés au navigateur. Nous avons conçu un système de gamification avec des badges et des classements pour maintenir la motivation des apprenants. Une attention particulière a été portée à l'inclusivité, avec des thèmes à haut contraste et une navigation entièrement pilotable au clavier, permettant à chaque étudiant, quel que soit son handicap, de suivre les cours dans des conditions optimales.",
       "classe": "mt-24"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "login": "anta",
+      "password": "anta"
     },
     {
-      "id": 7,
-      "title": "ujjn",
-      "domaine": "nn",
-      "annee": "2024",
-      "image": "images/P1.jpeg",
-      "objectif": "Créer une boutique en ligne moderne et performante pour une marque de cosmétiques.",
-      "description": "nnnnnnnnnnnn",
-      "contrainte": "nnnnnnnnnnn",
-      "solution": "nnnnnnnnnnnnnnnn"
-    },
-    {
-      "id": 8,
-      "title": " v",
-      "domaine": "v",
-      "annee": "5",
-      "image": "images/vvv",
-      "objectif": "ff",
-      "description": "vv",
-      "contrainte": "c",
-      "solution": "bbcc"
+      "id": "2",
+      "login": "owel",
+      "password": "owel"
     }
   ]
 }
