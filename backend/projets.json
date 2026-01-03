@@ -72,7 +72,7 @@
       "classe": "mt-24"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "ujjn",
       "domaine": "nn",
       "annee": "2024",
@@ -84,26 +84,26 @@
     },
     {
       "id": 8,
-      "title": " v",
-      "domaine": "v",
-      "annee": "5",
-      "image": "images/vvv",
-      "objectif": "ff",
-      "description": "vv",
-      "contrainte": "c",
-      "solution": "bbcc"
+      "title": "vvvvvv",
+      "domaine": "vvvvvvvvv",
+      "annee": "vvvvvvv",
+      "image": "images/vvvvvvvvvvvv",
+      "objectif": "ccccc",
+      "description": "ccccccc",
+      "contrainte": "ccccc",
+      "solution": "vvvvv"
     }
   ],
-   "admin":[
+  "admin": [
     {
-        "id": 1,
-        "login": "anta",
-        "password": "anta"
+      "id": "1",
+      "login": "anta",
+      "password": "anta"
     },
     {
-        "id": 2,
-        "login": "owel",
-        "password": "owel"
+      "id": "2",
+      "login": "owel",
+      "password": "owel"
     }
-]
+  ]
 }

@@ -9,7 +9,7 @@ export class AdminService {
   private url: string = "http://localhost:3000/projets";
   private http = inject(HttpClient);
   
-  isAdmin = signal<boolean>(false);
+  isAdmin = signal<boolean>(localStorage.getItem('isLoggedIn') === 'true');
 
   getall() {
     return this.http.get<AdminInterf[]>(this.url);
@@ -22,5 +22,6 @@ export class AdminService {
   
   logout() {
     this.isAdmin.set(false);
+    localStorage.removeItem('isLoggedIn');
   }
 }

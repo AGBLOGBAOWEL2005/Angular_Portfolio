@@ -30,6 +30,7 @@ export class Connecter {
         if (admins.length > 0) {
           // Connexion réussie
           this.adminService.isAdmin.set(true); 
+          localStorage.setItem('isLoggedIn', 'true');
           this.router.navigate(['/']); 
         } else {
           // Échec
