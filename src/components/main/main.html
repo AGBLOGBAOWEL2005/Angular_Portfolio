@@ -1,0 +1,6 @@
+<app-hero></app-hero>
+<app-ajout-projet
+  [projetAEditer]="projetSelectionne"
+  (onFermeModale)="resetModif()">
+</app-ajout-projet>
+<app-portfolio (onEdit)="preparerModif($event)"></app-portfolio>
