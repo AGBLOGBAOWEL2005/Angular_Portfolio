@@ -10,4 +10,14 @@ import { AdminService } from '../../services/admin-service';
 })
 export class Header {
   adminService = inject(AdminService);
+  isMenuOpen: boolean = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
 }
