@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './hero.css',
 })
 export class Hero {
-  title = 'Creative Portfolio';
-  subtitle = 'We help businesses from new startups to established brands to create digital products that people love.';
+  title = `L'Odyssée Créative`;
+  subtitle = 'Accompagner votre croissance par le design et la performance, de la vision stratégique à la réalisation concrète.';
   buttonText = 'Voir mes projets';
 
   onButtonClick(): void {

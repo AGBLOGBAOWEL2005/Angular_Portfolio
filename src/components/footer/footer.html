@@ -1,138 +1,87 @@
 <footer class="bg-[#051129] text-white py-16 px-6">
-    <section class="bg-[#051129] text-white py-20 px-6">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-    
-    <div class="space-y-10">
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 bg-emerald-500 rounded-full"></span>
-        <span class="text-sm font-medium uppercase tracking-widest text-slate-300">build everything</span>
-      </div>
-      
-      <h2 class="text-5xl md:text-6xl font-bold leading-tight">
-        Une question ? N'hexitez pas à nous contacter ...
-      </h2>
+  <section class="bg-[#051129] text-white py-20 px-0">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-        <div>
-          <p class="text-slate-400 text-sm mb-1">Téléphone</p>
-          <p class="text-xl font-semibold">+221 33648379</p>
+      <div class="space-y-10">
+        <div class="mb-12">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-12 h-[2px] bg-[#007bff]"></span>
+            <span class="text-[#007bff] font-bold uppercase tracking-[0.3em] text-xs">Contact</span>
+          </div>
+          <h2 class="text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-tight">
+            Une question ?<br>Parlons-en<span class="text-[#007bff]">.</span>
+          </h2>
         </div>
-        <div>
-          <p class="text-slate-400 text-sm mb-1">Email</p>
-          <p class="text-xl font-semibold">me@owan.com</p>
+
+        <p class="text-slate-400 text-lg leading-relaxed max-w-md">
+           N'hésitez pas à nous contacter pour discuter de votre prochain projet ou de vos besoins en infrastructure.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+          <div>
+            <p class="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Téléphone</p>
+            <p class="text-xl font-bold">+221 33 648 37 79</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Email</p>
+            <p class="text-xl font-bold">me@owan.com</p>
+          </div>
+          <div class="md:col-span-2">
+            <p class="text-slate-400 text-sm mb-1 font-medium uppercase tracking-wider">Localisation</p>
+            <p class="text-xl font-bold">Cotonou, Dakar, New York</p>
+          </div>
         </div>
-        <div class="md:col-span-2">
-          <p class="text-slate-400 text-sm mb-1">Localisation</p>
-          <p class="text-xl font-semibold">Cotonou, Dakar, New York</p>
+
+        <div class="pt-10 border-t border-slate-800">
+          <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest font-bold">Approuvé par</p>
+          <div class="flex flex-wrap gap-8 opacity-40 grayscale">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-5" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" class="h-5" alt="Stripe">
+          </div>
         </div>
       </div>
 
-      <div class="pt-10 border-t border-slate-800">
-        <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest">Approuvé par</p>
-        <div class="flex flex-wrap gap-8 opacity-50 grayscale">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-6" alt="Google">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-6" alt="PayPal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" class="h-6" alt="Stripe">
-        </div>
+      <div id="contact" class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl text-slate-900 mt-8 lg:mt-0">
+        <h3 class="text-3xl font-bold mb-8">Contactez-nous</h3>
+
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Prénom" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+            <input type="text" placeholder="Nom" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+          </div>
+
+          <input type="email" placeholder="Votre email" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+
+          <select class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none text-slate-500 transition-all">
+            <option>Sénégal</option>
+            <option>Bénin</option>
+            <option>Cameroun</option>
+            <option>Côte d'Ivoire</option>
+            <option>États-Unis</option>
+          </select>
+
+          <textarea placeholder="Votre message" rows="4" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none resize-none transition-all"></textarea>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-1">
+            Envoyer la demande
+          </button>
+        </form>
       </div>
+
     </div>
+  </section>
 
-    <div id="contact" class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-slate-900">
-      <h3 class="text-3xl font-bold mb-8">Contater-nous</h3>
-      
-      <form class="space-y-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input type="text" placeholder="Prénom" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-          <input type="text" placeholder="Nom" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-        </div>
-        
-        <input type="email" placeholder="votremail" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-        
-        <select class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-slate-500">
-          <option>Benin</option>
-          <option>Senegal</option>
-          <option>Cameroun</option>
-          <option>Côte d'Ivoire</option>
-          <option>Togo</option>
-          <option>Etats Unis</option>
-        </select>
-
-        <textarea placeholder="Poser une question" rows="4" class="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none resize-none"></textarea>
-
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition-all transform hover:-translate-y-1">
-          Envoyer la demande
-        </button>
-      </form>
-    </div>
-
-  </div>
-</section>
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-slate-800 pb-16">
-    
-    <div class="space-y-6">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-blue-500 rounded-lg transform rotate-12"></div>
-        <span class="text-3xl font-bold tracking-tight">OwAn</span>
-      </div>
-      <h2 class="text-4xl md:text-5xl font-bold leading-tight">
-        Prêt à <br> commencer ?
-      </h2>
-      <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all">
-        Démarrer
-      </button>
     </div>
-
-    <div class="space-y-8">
-      <h3 class="text-xl font-bold">Support</h3>
-      <div class="space-y-4">
-        <div>
-          <p class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Téléphone</p>
-          <p class="text-2xl text-slate-300 font-medium">+(221) 78 567 44 33</p>
-        </div>
-        <div>
-          <p class="text-slate-400 text-sm font-semibold uppercase tracking-wider">Email</p>
-          <p class="text-2xl text-slate-300 font-medium">info@portfolio.com</p>
-        </div>
-      </div>
-      <div class="flex gap-4">
-        <a href="#" class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-blue-600 transition-colors">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-blue-600 transition-colors">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="w-10 h-10 bg-slate-800 flex items-center justify-center rounded hover:bg-blue-600 transition-colors">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="space-y-6">
-      <h3 class="text-2xl font-bold">S'abonner à notre portfolio</h3>
-      <p class="text-slate-400">
-        Soyez informé de tous nos dernièr(e)s projets/compétences.
-      </p>
-      <div class="flex">
-        <input 
-          type="email" 
-          placeholder="Email*" 
-          class="w-full px-4 py-3 bg-white text-slate-900 rounded-l-lg focus:outline-none"
-        >
-        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-bold transition-colors">
-          S'abonner
-        </button>
-      </div>
-    </div>
-
-  </div>
 
   <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm">
-    <div class="flex gap-8">
+    <div class="flex gap-8 font-medium">
       <a (click)="onButtonAproposClick()" class="hover:text-white transition-colors cursor-pointer">À propos</a>
-      <a  class="hover:text-white transition-colors cursor-pointer" (click)="onButtonClick()">Services</a>
+      <a class="hover:text-white transition-colors cursor-pointer" (click)="onButtonClick()">Services</a>
       <a href="#" class="hover:text-white transition-colors cursor-pointer">Portfolio</a>
       <a (click)="onButtonContactClick()" class="hover:text-white transition-colors cursor-pointer">Contact</a>
     </div>
-    <p>© Tous droits réservés. Créé par GetNextJs Templates</p>
+    <p>2026 Tous droits réservés. Créé par OwAn</p>
   </div>
 </footer>
