@@ -8,7 +8,6 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-portfolio',
   imports: [CommonModule,RouterLink],
-  standalone: true,
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
