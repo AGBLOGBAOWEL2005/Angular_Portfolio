@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Footer {
     onButtonClick(): void {
-    const element = document.getElementById('portfolio');
+    const element = document.getElementById('service');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -21,6 +21,12 @@ export class Footer {
   }
   onButtonAproposClick():void{
     const element = document.querySelector("#apropos");
+    if(element){
+      element.scrollIntoView({behavior:'smooth'});
+    }
+  }
+  onButtonPortfolioClick():void{
+    const element = document.querySelector("#portfolio");
     if(element){
       element.scrollIntoView({behavior:'smooth'});
     }

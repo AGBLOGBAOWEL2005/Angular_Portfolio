@@ -1,6 +1,18 @@
 {
   "projets": [
     {
+      "id": "3",
+      "title": "Refonte Identité Visuelle LTI3",
+      "image": "images/P3.jpeg",
+      "domaine": "Design Graphique",
+      "annee": 2024,
+      "objectif": "Moderniser l'image de marque de l'école pour attirer de nouveaux étudiants.",
+      "contrainte": "Conserver les couleurs historiques tout en simplifiant le logo.",
+      "solution": "Création d'un système de design (Design System) complet et d'une charte graphique épurée.",
+      "description": "La refonte de l'identité visuelle de LTI3 visait à projeter une image d'innovation et d'excellence académique. Le travail a débuté par une analyse profonde des valeurs de l'institution pour aboutir à une charte graphique cohérente déclinable sur tous les supports : web, réseaux sociaux, signalétique intérieure et supports de cours. Le nouveau langage visuel utilise des typographies modernes et une iconographie épurée qui facilitent la lisibilité tout en renforçant l'appartenance à la communauté de l'école.",
+      "classe": ""
+    },
+    {
       "id": "4",
       "title": "Système de Gestion de Bibliothèque",
       "image": "images/P4.jpeg",
@@ -35,6 +47,28 @@
       "solution": "Interface construite avec Tailwind CSS et intégration de lecteurs d'écran avancés.",
       "description": "La plateforme propose des parcours d'apprentissage interactifs avec des éditeurs de code directement intégrés au navigateur. Nous avons conçu un système de gamification avec des badges et des classements pour maintenir la motivation des apprenants. Une attention particulière a été portée à l'inclusivité, avec des thèmes à haut contraste et une navigation entièrement pilotable au clavier, permettant à chaque étudiant, quel que soit son handicap, de suivre les cours dans des conditions optimales.",
       "classe": "mt-24"
+    },
+    {
+      "id": "7",
+      "title": "Syteme de capture de temperature",
+      "domaine": "Electronique",
+      "annee": "2026",
+      "image": "images/P1.jpeg",
+      "objectif": "Savoir la qualité de  température",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "contrainte": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "solution": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": 8,
+      "title": "oiomv",
+      "domaine": "knkvoi",
+      "annee": "2923",
+      "image": "images/kkivf",
+      "objectif": "meeeeeeeekif ",
+      "description": "fiimv inivovf koiiopfk fnifmiopomf kiofkiomf  koib kompoimk b knbib ikibkoj m ko oinc k giopvj;n\nfk jkdiuojfujijjnkc c enfioncjijknm vij kuhrjvn cjkuwbjhvjf ne uiffirm",
+      "contrainte": "vknkfnkm m kniknikkfl knikb nigniiinb inibj  iniibitn",
+      "solution": " inivkr rknbinv inbik kv ijijbiimib"
     }
   ],
   "admin": [

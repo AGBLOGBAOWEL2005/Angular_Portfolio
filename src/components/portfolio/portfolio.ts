@@ -23,8 +23,9 @@ export class Portfolio {
   deleteProject(id: number) {
     if (confirm('Voulez-vous vraiment supprimer ce projet ?')) {
       this.projetService.delete(id).subscribe({
-        next: () => {
+        next: (res) => {
           this.portfolioinfo$ = this.projetService.getall();
+          console.log(res)
         },
         error: (err) => console.error("Erreur suppression :", err)
       });

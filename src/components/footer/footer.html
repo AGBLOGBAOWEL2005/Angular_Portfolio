@@ -1,4 +1,4 @@
-<footer class="bg-[#051129] text-white py-16 px-6">
+<footer id="contact" class="bg-[#051129] text-white py-16 px-6">
     <section class="bg-[#051129] text-white py-20 px-6">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
     
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div id="contact" class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-slate-900">
+    <div  class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-slate-900">
       <h3 class="text-3xl font-bold mb-8">Contater-nous</h3>
       
       <form class="space-y-4">
@@ -78,7 +78,7 @@
         Prêt à <br> commencer ?
       </h2>
       <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all">
-        Démarrer
+        <a href="">Démarrer</a>
       </button>
     </div>
 
@@ -130,7 +130,7 @@
     <div class="flex gap-8">
       <a (click)="onButtonAproposClick()" class="hover:text-white transition-colors cursor-pointer">À propos</a>
       <a  class="hover:text-white transition-colors cursor-pointer" (click)="onButtonClick()">Services</a>
-      <a href="#" class="hover:text-white transition-colors cursor-pointer">Portfolio</a>
+      <a (click)="onButtonPortfolioClick()" class="hover:text-white transition-colors cursor-pointer">Portfolio</a>
       <a (click)="onButtonContactClick()" class="hover:text-white transition-colors cursor-pointer">Contact</a>
     </div>
     <p>© Tous droits réservés. Créé par GetNextJs Templates</p>
