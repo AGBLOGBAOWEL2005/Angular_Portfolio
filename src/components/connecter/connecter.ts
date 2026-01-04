@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AdminService } from '../../services/admin-service';
 import { Router } from '@angular/router';
+import { AdminInterf } from '../../interface/admin-interf';
 
 @Component({
   selector: 'app-connecter',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class Connecter {
   private adminService = inject(AdminService);
   private router = inject(Router);
-
+  admin: AdminInterf[] = [];
   handleSubmit(myForm: NgForm) {
     // 1. Extraction deses valeurs du formulaire
     const { login, password } = myForm.value;
@@ -27,7 +28,10 @@ export class Connecter {
     this.adminService.login(login, password).subscribe({
       next: (admins) => {
         if (admins.length == 1) {
+          this.admin = admins;
           // Connexion réussie
+          const idAEnregistrer = String(this.admin[0].id);
+          localStorage.setItem('id',idAEnregistrer);
           this.adminService.isAdmin.set(true);
           localStorage.setItem('isLoggedIn', 'true');
           this.router.navigate(['/']);
