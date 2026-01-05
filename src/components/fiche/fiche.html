@@ -1,6 +1,5 @@
 <section class="relative min-h-screen bg-[#051129] text-white py-20 px-6">
   <div class="container mx-auto max-w-6xl">
-
     <a routerLink="/" class="text-[#007bff] hover:text-white transition-colors mb-12 inline-flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -9,91 +8,89 @@
     </a>
 
     @if (projetDeatail$ | async; as projet){
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-      <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
-        <img [src]="projet.image" [alt]="projet.title" class="w-full h-full object-cover aspect-[4/5]">
-      </div>
-
-      <div class="flex flex-col justify-center">
-        <div class="mb-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="w-12 h-[2px] bg-[#007bff]"></span>
-            <span class="text-[#007bff] font-bold uppercase tracking-widest text-sm">{{ projet.domaine }}</span>
-          </div>
-          <h1 class="text-5xl font-extrabold mb-4">{{ projet.title }}</h1>
-          <p class="text-xl text-gray-400">Année : {{ projet.annee }}</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+          <img [src]="projet.image" [alt]="projet.title" class="w-full h-full object-cover aspect-[4/5]">
         </div>
 
-        <div class="space-y-6 mb-10">
-          <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
-            <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Objectif</h4>
-            <p class="text-gray-300">{{ projet.objectif }}</p>
+        <div class="flex flex-col justify-center">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-12 h-[2px] bg-[#007bff]"></span>
+              <span class="text-[#007bff] font-bold uppercase tracking-widest text-sm">{{ projet.domaine }}</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-4">{{ projet.title }}</h1>
+            <p class="text-xl text-gray-400">Année : {{ projet.annee }}</p>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-6 mb-10">
             <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
-              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Contrainte</h4>
-              <p class="text-gray-400 text-sm">{{ projet.contrainte }}</p>
+              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Objectif</h4>
+              <p class="text-gray-300">{{ projet.objectif }}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+                <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Contrainte</h4>
+                <p class="text-gray-400 text-sm">{{ projet.contrainte }}</p>
+              </div>
+              <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
+                <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Solution</h4>
+                <p class="text-gray-400 text-sm">{{ projet.solution }}</p>
+              </div>
             </div>
             <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
-              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Solution</h4>
-              <p class="text-gray-400 text-sm">{{ projet.solution }}</p>
+              <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Description</h4>
+              <p class="text-gray-400 leading-relaxed">{{ projet.description }}</p>
             </div>
-          </div>
-
-          <div class="bg-[#0b132a] p-6 rounded-2xl border border-gray-800">
-            <h4 class="text-[#007bff] text-xs uppercase font-bold mb-2">Description</h4>
-            <p class="text-gray-400 leading-relaxed">{{ projet.description }}</p>
           </div>
         </div>
       </div>
-    </div>
-    }@else {
-    <div class="flex justify-center items-center min-h-[50vh]">
-      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-    </div>
+    } @else {
+      <div class="flex justify-center items-center min-h-[50vh]">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      </div>
     }
+
+    <div class="mt-12 flex justify-center">
+      <button (click)="commenter()" class="px-8 py-4 text-xl font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-2xl transition-all shadow-lg shadow-blue-900/20">
+        Ajouter un commentaire
+      </button>
+    </div>
   </div>
-  <div>
-    <button (click)="commenter()" class=" m-12 p-4 text-xl font-bold text-white bg-blue-500 rounded-xl">Ajouter un
-      commentaire
-    </button>
 
-    @if(isOpen){
-    <div
-      class="max-w-md mx-auto bg-white dark:bg-[#1c263f] p-6 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+  @if(isOpen){
+    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+      <div class="w-full max-w-md bg-white dark:bg-[#1c263f] p-8 rounded-[2rem] shadow-2xl animate-in fade-in zoom-in duration-300">
+        <div class="mb-6">
+          <h3 class="text-2xl font-bold text-slate-800 dark:text-white tracking-tight">Laissez un message</h3>
+          <p class="text-sm text-slate-500">Votre avis nous aide à nous améliorer.</p>
+        </div>
 
-      <div class="mb-6">
-        <h3 class="text-xl font-extrabold text-slate-800 dark:text-white tracking-tight">Laissez un message</h3>
-        <p class="text-xs text-slate-500">Votre avis nous aide à nous améliorer.</p>
+        <form class="space-y-4">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Email</label>
+            <input type="email" placeholder="votre@email.com"
+              class="w-full px-4 py-3 bg-slate-50 dark:bg-[#0b132a] border border-slate-200 dark:border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm dark:text-white">
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-400 ml-1">Votre commentaire</label>
+            <textarea rows="4" placeholder="Dites-nous ce que vous en pensez..."
+              class="w-full px-4 py-3 bg-slate-50 dark:bg-[#0b132a] border border-slate-200 dark:border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm dark:text-white resize-none"></textarea>
+          </div>
+
+          <div class="flex gap-3 pt-4">
+            <button type="button" (click)="annuler()"
+              class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200 font-bold py-4 rounded-xl hover:bg-slate-200 transition-all">
+              Annuler
+            </button>
+            <button type="submit"
+              class="flex-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all">
+              Envoyer
+            </button>
+          </div>
+        </form>
       </div>
-
-      <form class="space-y-4">
-        <div class="flex flex-col gap-1.5">
-          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 ml-1">Email</label>
-          <input type="email" placeholder="votre@email.com"
-            class="w-full px-4 py-3 bg-slate-50 dark:bg-[#0b132a] border border-slate-200 dark:border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm dark:text-white transition-all">
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-[11px] font-bold uppercase tracking-wider text-slate-400 ml-1">Votre commentaire</label>
-          <textarea rows="3" placeholder="Dites-nous ce que vous en pensez..."
-            class="w-full px-4 py-3 bg-slate-50 dark:bg-[#0b132a] border border-slate-200 dark:border-none rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm dark:text-white resize-none transition-all"></textarea>
-        </div>
-
-        <div class="flex gap-3 pt-2">
-          <button type="button" (click)="annuler()"
-            class="flex-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-200 font-bold py-3 rounded-xl transition-all hover:bg-slate-200 dark:hover:bg-slate-600 active:scale-95 text-xs uppercase tracking-widest">
-            Annuler
-          </button>
-
-          <button type="submit"
-            class="flex-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-md shadow-blue-200 dark:shadow-none transition-all active:scale-95 text-xs uppercase tracking-widest">
-            Envoyer
-          </button>
-        </div>
-      </form>
-    </div>}
-  </div>
+    </div>
+  }
 </section>
