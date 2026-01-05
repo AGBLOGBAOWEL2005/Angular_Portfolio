@@ -16,4 +16,12 @@ export class Fiche {
 
   idParam = this.route.snapshot.paramMap.get('id');
   projetDeatail$ = this.projetService.getOne(Number(this.idParam));
+  
+  isOpen: boolean = false;
+  commenter(){
+        this.isOpen = true;
+  }
+  annuler(){
+    this.isOpen = false;
+  }
 }
